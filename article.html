@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>線上英文打字練習_提高打字速度_英文打字_打字指法_盲打訓練_指法練習_英文打字指法_英文打字指法訓練_打字指法練習</title>
+    <meta name="keywords" content="線上英文打字練習,提高打字速度,英文打字,打字指法,盲打訓練,指法練習,英文打字指法,英文打字指法訓練,打字指法練習">
+    <meta name="description" content="線上英文打字練習,提高英文打字速度,掌握盲打技巧,訓練打字準確率,提高速度,掌握打字指法。">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/uikit.css"/>
+    <link rel="stylesheet" href="css/theme.css"/>
+    <link rel="stylesheet" href="css/type.css"/>
+    <script src="js/type.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nb"
+                aria-controls="nb" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nb">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">首頁 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="basic.html">指法訓練</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="words.html">單詞訓練</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">文章訓練</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="uk-padding-large uk-background-top-left uk-background-fixed uk-background-cover"
+     style="background-image: url(./imgs/bg002.jpg);">
+    <div class="container">
+        <p class="display-4 text-light text-center">直視螢幕，禁止偷窺鍵盤！</p>
+        <p class="display-4 text-light text-center">直視螢幕，禁止偷窺鍵盤！</p>
+        <p class="display-4 text-light text-center">直視螢幕，禁止偷窺鍵盤！</p>
+    </div>
+</div>
+<div id="main" class="uk-section container">
+    <div class="uk-container">
+        <div class="h4 uk-width-2-3 uk-align-right">第一次敲擊開始計算打字速度 {{speed}} 字/分鐘 錯誤：{{errorTimes}} 次</div>
+        <div class="btn-group uk-width-1-4">
+            <button class="btn btn-primary">第一部分</button>
+            <div uk-dropdown="pos: bottom-justify">
+                <ul class="uk-nav uk-dropdown-nav">
+                    <li><a href="#" @click="loadArticle('article001.json');">練習1</a></li>
+                    <li><a href="#" @click="loadArticle('article002.json');">練習2</a></li>
+                    <li><a href="#" @click="loadArticle('article003.json');">練習3</a></li>
+                    <li><a href="#" @click="loadArticle('article004.json');">練習4</a></li>
+                    <li><a href="#" @click="loadArticle('article005.json');">練習5</a></li>
+                    <li><a href="#" @click="loadArticle('article006.json');">練習6</a></li>
+                    <li><a href="#" @click="loadArticle('article007.json');">練習7</a></li>
+                    <li><a href="#" @click="loadArticle('article008.json');">練習8</a></li>
+                    <li><a href="#" @click="loadArticle('article009.json');">練習9</a></li>
+                    <li><a href="#" @click="loadArticle('article010.json');">練習10</a></li>
+                </ul>
+            </div>
+            <button class="btn btn-primary">第二部分</button>
+            <div uk-dropdown="pos: bottom-justify">
+                <ul class="uk-nav uk-dropdown-nav">
+                    <li><a href="#" @click="loadArticle('article011.json');">練習11</a></li>
+                    <li><a href="#" @click="loadArticle('article012.json');">練習12</a></li>
+                    <li><a href="#" @click="loadArticle('article013.json');">練習13</a></li>
+                    <li><a href="#" @click="loadArticle('article014.json');">練習14</a></li>
+                    <li><a href="#" @click="loadArticle('article015.json');">練習15</a></li>
+                    <li><a href="#" @click="loadArticle('article016.json');">練習16</a></li>
+                    <li><a href="#" @click="loadArticle('article017.json');">練習17</a></li>
+                    <li><a href="#" @click="loadArticle('article018.json');">練習18</a></li>
+                    <li><a href="#" @click="loadArticle('article019.json');">練習19</a></li>
+                    <li><a href="#" @click="loadArticle('article020.json');">練習20</a></li>
+                </ul>
+            </div>
+            <button class="btn btn-primary">第三部分</button>
+            <div uk-dropdown="pos: bottom-justify">
+                <ul class="uk-nav uk-dropdown-nav">
+                    <li><a href="#" @click="loadArticle('article021.json');">練習21</a></li>
+                    <li><a href="#" @click="loadArticle('article022.json');">練習22</a></li>
+                    <li><a href="#" @click="loadArticle('article023.json');">練習23</a></li>
+                    <li><a href="#" @click="loadArticle('article024.json');">練習24</a></li>
+                    <li><a href="#" @click="loadArticle('article025.json');">練習25</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="input-div" class="uk-margin uk-padding" v-html="article"></div>
+</div>
+<script src="js/popper.min.js"></script>
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/axios.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/uikit.js"></script>
+<script src="js/uikit-icons.js"></script>
+<script src="js/basic.js"></script>
+<script src="js/article.js"></script>
+</body>
+</html>
