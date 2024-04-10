@@ -1,7 +1,7 @@
 var autoRun = null;
 var time = 0;
 var numAll = 0;
-var timeLimit = 5;
+var timeLimit = 300;
 
 function changeText() {
     clearText();
