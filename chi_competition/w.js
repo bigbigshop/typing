@@ -25,7 +25,7 @@ function changeText() {
             break
         }
         var h = '#CCC';
-        console.log(a.charAt(i - f), b.charAt(i))
+        //console.log(a.charAt(i - f), b.charAt(i))
         if (a.charAt(i - f) != b.charAt(i)) {
             e++;
             h = 'red'
@@ -147,7 +147,7 @@ function btnStartClick() {
         time = 0;
         autoRun = window.setInterval(timer, 1000)		
     } else {
-        alert('您的成績：\n' + getObj('spanSpeed').innerHTML+ "\n精準率: "+ getObj('spanRate').innerHTML + "\n\n\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手");
+        alert('您的成績：\n' + getObj('spanSpeed').innerHTML+ "\n精準率: "+ getObj('spanRate').innerHTML + "\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手");
         a.value = '開始練習'
     }	
 }
@@ -162,12 +162,16 @@ function timer() {
     getObj('spanTime').innerHTML = timeLimit - (time) + '秒';
     var c = getObj('txtInput').value;
     c = c.replace(/\r\n/g, '\n');
-    getObj('spanSpeed').innerHTML = Math.round(c.length / time * timeLimit) + '字/分'
+    getObj('spanSpeed').innerHTML = Math.round(c.length / time * 60) + '字/分'	
 	if(time>timeLimit){
-		alert('您的成績：\n' + getObj('spanSpeed').innerHTML+ "\n精準率: "+ getObj('spanRate').innerHTML + "\n\n\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手");
+		alert('您的成績：\n' + getObj('spanSpeed').innerHTML+ "\n精準率: "+ getObj('spanRate').innerHTML + "\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手\n請不要按任何鍵，立即舉手");
 		clearText();
 	}
+	//console.log(time);
+	console.log(c.length);
 }
+
+
 
 function getObj(a) {
     return document.getElementById(a)
@@ -231,6 +235,7 @@ function del_text() {
 
 // disable right click
 document.addEventListener('contextmenu', event => event.preventDefault());
+
 
 document.onkeydown = function (e) {
 
